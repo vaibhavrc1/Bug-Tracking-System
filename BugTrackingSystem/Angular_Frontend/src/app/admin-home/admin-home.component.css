@@ -1,0 +1,8 @@
+#hero-image {
+    height: 580px;
+    padding-top: 1px;
+    background: #e8eced url("D:\Projects\Integrated_bugtracking\BugTrackingSystem\Angular_Frontend\src\assets\hero.jpg") no-repeat center;
+}
+#hero-image h1 {
+    margin: 180px 0 40px 0;
+}

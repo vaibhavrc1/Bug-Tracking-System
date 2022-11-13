@@ -1,0 +1,22 @@
+.col-sm-4{
+    margin: 10px;
+}
+
+
+
+
+.container{
+    margin-top: 8%;
+}
+
+.inner{
+    overflow: hidden;
+}
+.card ,.inner{
+    transition: all 1s; 
+}
+
+.card:hover, .inner:hover img{
+    box-shadow: 8px 8px 8px grey;
+    transform:scale(1.2);
+}

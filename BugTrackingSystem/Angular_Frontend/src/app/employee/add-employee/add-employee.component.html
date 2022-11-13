@@ -1,0 +1,98 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h2 style="text-align: center;">Create Employee</h2>
+          <form  [formGroup]="addEmployee" (ngSubmit)="onSubmit()" >
+            
+            <div class="form-group row">
+              <label for="empId" class="col-sm-2 col-form-label">Employee Id</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="empId" formControlName="empId" [(ngModel)]="employee.empId">
+                <span *ngIf="addEmployee.get('empId').touched && addEmployee.get('empId').hasError('required')">Enter Employee Id</span>
+                </div>
+            </div>
+
+            
+            <div class="form-group row">
+              <label for="empName" class="col-sm-2 col-form-label">Employee Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="empName" formControlName="empName" [(ngModel)]="employee.empName">
+                <span *ngIf="addEmployee.get('empName').touched && addEmployee.get('empName').hasError('required')" >Enter Employee Name</span>
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" formControlName="emailAddr" [(ngModel)]="employee.employeeEmail">
+                <span *ngIf="addEmployee.get('emailAddr').touched && addEmployee.get('emailAddr').hasError('required')">Enter Email Address</span>
+                <span *ngIf="addEmployee.get('emailAddr').touched && addEmployee.get('emailAddr').hasError('email')">Enter Valid Email Address</span>  
+                </div>
+            </div>
+            
+
+            <div class="form-group row">
+              <label for="employeeContact" class="col-2 col-form-label">Contact Number</label>
+              <div class="col-2">
+              <select class="custom-select col-2" style="max-width: 120px;">
+                  <option selected="">+91</option>
+                  <option value="1">+92</option>
+                  <option value="2">+98</option>
+                  <option value="3">+70</option>
+              </select></div>
+              <div class="col-8">
+                <input type="text" class="form-control " id="employeeContact" formControlName="employeeContact" [(ngModel)]="employee.employeeContact">
+                <span *ngIf="addEmployee.get('employeeContact').touched && addEmployee.get('employeeContact').hasError('required')">Enter Contact Number</span>
+                <span *ngIf="addEmployee.get('employeeContact').touched && addEmployee.get('employeeContact').hasError('minlength')">Length Should be 10</span>
+                <span *ngIf="addEmployee.get('employeeContact').touched && addEmployee.get('employeeContact').hasError('maxlength')">Length should be 10</span>
+              </div>
+            
+            </div>
+            
+            
+            <div class="form-group row">
+              <label for="empStatus" class="col-sm-2 col-form-label">Employee Status</label>
+              <div class="col-sm-10">
+                <select class="form-control" id="empStatus" formControlName="empStatus" [(ngModel)]="employee.empStatus">
+                  
+                  <option>Free</option>
+                  <option>Assigned</option>
+                </select>
+               
+                </div>
+            </div>
+
+            
+            <div class="form-group row">
+              <label for="employeeUserId" class="col-sm-2 col-form-label">User Id</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="employeeUserId" formControlName="employeeUserId" [(ngModel)]="employee.employeeUserId">
+                <span *ngIf="addEmployee.get('employeeUserId').touched && addEmployee.get('employeeUserId').hasError('required')">Enter UserId</span>
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label for="employeePassword" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="employeePasswor" formControlName="employeePassword" [(ngModel)]="employee.employeePassword">
+                <span *ngIf="addEmployee.get('employeePassword').touched && addEmployee.get('employeePassword').hasError('required')">Enter Password</span>
+              </div>
+            </div>
+            
+           
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary" [disabled]="!addEmployee.valid" >Add Employee</button>
+              </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+

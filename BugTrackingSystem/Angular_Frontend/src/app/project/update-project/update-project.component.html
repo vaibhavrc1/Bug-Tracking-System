@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron">
+        <h2 style="text-align: center;">Update Project</h2>
+        <form  [formGroup]="updateProject" (ngSubmit)="onSubmit()" >
+          
+          <div class="form-group row">
+            <label for="projectId" class="col-sm-2 col-form-label">Project Id</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <input type="text" class="form-control" id="projectId" formControlName="projectId" [(ngModel)]="project.projectId">
+              <span *ngIf="updateProject.get('projectId').touched && updateProject.get('projectId').hasError('required')">Enter Project Id</span>
+              </div>
+          </div>
+          <div class="form-group row">
+            <label for="projectName" class="col-sm-2 col-form-label">Project Name</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <input type="text" class="form-control" id="projectName" formControlName="projectName" [(ngModel)]="project.projectName">
+              <span *ngIf="updateProject.get('projectName').touched && updateProject.get('projectName').hasError('required')" >Enter Project Name</span>
+              </div>
+          </div> 
+          <div class="form-group row">
+            <label for="status" class="col-sm-2 col-form-label">Project Status</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <select class="form-control" id="status" formControlName="status" [(ngModel)]="project.status">
+                
+                <option>Ongoing</option>
+                <option>Closed</option>
+              </select>
+              <span *ngIf="updateProject.get('status').touched && updateProject.get('status').hasError('required')" >select Status</span>
+            
+              </div>
+          </div>
+          <div class="form-group row">
+            <label for="projectOwner" class="col-sm-2 col-form-label">Project Owner</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <input type="text" class="form-control" id="projectOwner" formControlName="projectOwner" [(ngModel)]="project.projectOwner">
+              <span *ngIf="updateProject.get('projectOwner').touched && updateProject.get('projectOwner').hasError('required')">Enter project Owner</span>
+            </div>
+          </div>
+          <div class="form-group" style="text-align: center;">
+              <button type="submit" class="btn btn-primary" [disabled]="!updateProject.valid" >Update Project</button>
+            </div> 
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

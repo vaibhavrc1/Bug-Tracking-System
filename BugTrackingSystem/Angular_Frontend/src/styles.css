@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* body{
+    background: rgba(3,168,160,1);
+background: -moz-linear-gradient(top, rgba(3,168,160,1) 0%, rgba(143,2,34,1) 71%, rgba(247,27,78,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(3,168,160,1)), color-stop(71%, rgba(143,2,34,1)), color-stop(100%, rgba(247,27,78,1)));
+background: -webkit-linear-gradient(top, rgba(3,168,160,1) 0%, rgba(143,2,34,1) 71%, rgba(247,27,78,1) 100%);
+background: -o-linear-gradient(top, rgba(3,168,160,1) 0%, rgba(143,2,34,1) 71%, rgba(247,27,78,1) 100%);
+background: -ms-linear-gradient(top, rgba(3,168,160,1) 0%, rgba(143,2,34,1) 71%, rgba(247,27,78,1) 100%);
+background: linear-gradient(to bottom, rgba(3,168,160,1) 0%, rgba(143,2,34,1) 71%, rgba(247,27,78,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a8a0', endColorstr='#f71b4e', GradientType=0 );
+
+height: 100%;
+margin: 0;
+background-repeat: no-repeat;
+background-attachment: fixed;
+} */
+
+body{
+    background-color: #E6E6FA;
+    margin: 0;
+    padding: 0;
+
+}

@@ -1,0 +1,28 @@
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h2 style="text-align: center;">Search Bug</h2>
+          <form  [formGroup]="updateFormBug" (ngSubmit)="onSubmit()" >
+            
+            <div class="form-group row">
+              <label for="bugId" class="col-sm-2 col-form-label">Bug Id</label>
+              <div class="col-sm-10" style="color: #FF0000">
+                <input type="text" class="form-control" id="bugId" formControlName="bugId" [(ngModel)]="bug.bugId">
+                <span *ngIf="updateFormBug.get('bugId').touched && updateFormBug.get('bugId').hasError('required')">Enter Bug Id</span>
+                </div>
+            </div>
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary" [disabled]="!updateFormBug.valid" >Search Bug</button>
+              </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+<br>

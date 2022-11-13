@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h2 style="text-align: center;">add emp</h2>
+          <form  [formGroup]="addEmp" (ngSubmit)="onSubmit()" >
+            
+            <div class="form-group row">
+              <label for="projectId" class="col-sm-2 col-form-label">Project Id</label>
+              <div class="col-sm-10" style="color: #FF0000">
+                <input type="text" class="form-control" id="projectId" formControlName="projectId" [(ngModel)]="pid">
+                <span *ngIf="addEmp.get('projectId').touched && addEmp.get('projectId').hasError('required')">Enter Project Id</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="empId" class="col-sm-2 col-form-label">Employee Id</label>
+                <div class="col-sm-10" style="color: #FF0000">
+                  <input type="text" class="form-control" id="empId" formControlName="empId" [(ngModel)]="eid">
+                  <span *ngIf="addEmp.get('projectId').touched && addEmp.get('projectId').hasError('required')">Enter employee Id</span>
+                  </div>
+              </div>
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary" [disabled]="!addEmp.valid" >add </button>
+              </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

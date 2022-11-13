@@ -1,0 +1,62 @@
+<caption style="text-align: center;"><h2>Employee Details</h2>  </caption>
+
+<table class='table table-striped table-bordered table-hover'>
+	
+	<tbody>
+		<tr>
+			<td>Employee Id</td>
+			<td>{{selectedEmployee.empId}}</td>		
+		</tr>
+		<tr>
+			<td>Employee Name</td>
+			<td>{{selectedEmployee.empName}}</td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td>{{selectedEmployee.employeeEmail}}</td>
+        </tr>
+        <tr>
+			<td>Employee Contact</td>
+			<td>{{selectedEmployee.employeeContact}}</td>
+        </tr>
+        <tr>
+			<td>Employee Status</td>
+			<td>{{selectedEmployee.empStatus}}</td>
+        </tr>	
+        
+        <tr>
+			<td>UserId</td>
+			<td>{{selectedEmployee.employeeUserId}}</td>
+        </tr>
+        <tr>
+			<td>Password</td>
+			<td>{{selectedEmployee.employeePassword}}</td>
+		</tr>
+			
+			<tr *ngIf="selectedEmployee.bugList?.length">
+				<td>Bug Assigned</td>
+				<td>
+				<table class='table borderless' *ngIf="selectedEmployee.bugList?.length">
+					<thead  style="background-color:bisque;">
+						<tr>
+							<th>Bug Id:</th>
+										
+						</tr>
+					</thead>
+					<tbody>	
+				<tr *ngFor="let bug of selectedEmployee.bugList">
+					<td> {{bug.bugId }}   </td>
+						
+					</tbody>
+			</table>
+			</td>
+			  </tr>
+
+
+
+
+
+
+
+	</tbody>
+</table>

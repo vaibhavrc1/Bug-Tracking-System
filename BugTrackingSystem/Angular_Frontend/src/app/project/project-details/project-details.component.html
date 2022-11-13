@@ -1,0 +1,78 @@
+
+<div class="container-fluid">
+	
+	<div class="row">
+	  <div class="col-md-12 text-center">
+		<div class="btn-group btn-group-lg">
+		<button type="button" (click)="navigateToAll()" class="btn btn-outline-success btn-lg">All projects</button>
+		<button type="button" (click)="navigateToProject()" class="btn btn-outline-primary btn-lg">Project Dashboard</button>
+	  </div>
+	  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+<table class='table table-striped table-bordered table-hover'>
+	<caption ><h2>Project Details</h2>  </caption>
+	<thead  style="background-color:rgb(220, 255, 196);">
+		<tr>
+			<th>Project Id</th>
+				<th>Project Name</th>
+					<th>Project Owner</th>
+						<th>Project Status</th>
+						<th> Employees Details </th>
+						<th> Bug Details</th>
+						
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			
+			<td>{{selectedProject.projectId}}</td>		
+		
+			
+			<td>{{selectedProject.projectName}}</td>
+		
+			
+			<td>{{selectedProject.projectOwner}}</td>
+       
+			
+			<td>{{selectedProject.status}}</td>
+			<td>
+				<table class='table borderless' *ngIf="selectedProject.members?.length">
+					<thead  style="background-color:bisque;">
+						<tr>
+							<th>Employee Id:</th>
+								<th> Employee Name:</th>			
+						</tr>
+					</thead>
+					<tbody>	
+				<tr *ngFor="let employee of selectedProject.members">
+					<td>  <a [routerLink]="['/employee',employee.empId]">{{employee.empId }} </a> </td>
+						<td>{{employee.empName }} </td></tr>
+					</tbody>
+			</table>
+			  </td>
+			 
+			  <td>
+				<table class='table borderless' *ngIf="selectedProject.bugList?.length">
+					<thead  style="background-color:bisque;">
+						<tr>
+							<th>Bug Id:</th>
+								<th>  Assigne(Employee Name):</th>			
+						</tr>
+					</thead>
+					<tbody>	
+				<tr *ngFor="let bug of selectedProject.bugList">
+					
+					<td>  <a [routerLink]="['/bug',bug.bugId]">{{bug.bugId }} </a> </td>
+						<td>{{bug.assignee}} </td></tr>
+					</tbody>
+			</table>
+			  </td>
+        </tr>
+	</tbody>
+</table>

@@ -1,0 +1,80 @@
+
+
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/tZKFQ0K/create.png"  alt="Card image cap"></div>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title">Add Employee Details</h5>
+            <p class="card-text">You can add employee by using this button</p>
+            <a [routerLink]="['/addEmployee']" class="btn btn-primary">Add Employee</a>
+          </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-4">
+      <div class="card shadow" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/xFsb0FM/read.png"  alt="Card image cap">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">Search Employee</h5>
+          <p class="card-text">Search employee entry in the record with his/her details</p>
+          <a [routerLink]="['/searchEmployee']" class="btn btn-success">Search Employee</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-sm-4">
+      <div class="card shadow" style="width: 18rem;">
+       <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/kxh0qJp/update.png"  alt="Card image cap">
+        </div>
+        <div class="card-body" style="text-align: center;" >
+          <h5 class="card-title">Update Employee Details</h5>
+          <p class="card-text">You can update employee by using this button.</p>
+          <a [routerLink]="['/updateEmployee']" class="btn btn-secondary">Update Employee</a>
+        </div>
+      </div>
+    </div>
+
+     
+  </div>
+
+<br><br><br><br>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-4">
+      <div class="card shadow" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/M2TzQdZ/delete.png"  alt="Card image cap"></div>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title">Delete Employee Details</h5>
+            <p class="card-text">You can delete employee by using this button</p>
+            <a [routerLink]="['/deleteEmployee']" class="btn btn-danger">Delete Employee</a>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card shadow" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/yFPXLRv/list-By-Status.png"  alt="Card image cap"></div>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title">All Employees</h5>
+            <p class="card-text">You can view all employees by using this button</p>
+            <a [routerLink]="['/employees']" class="btn btn-success">View Employees</a>
+          </div>
+      </div>
+    </div>
+
+    
+
+</div>
+</div> 
+
+
+

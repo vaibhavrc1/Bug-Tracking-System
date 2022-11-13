@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h2 style="text-align: center;">search Project</h2>
+          <form  [formGroup]="searchProject" (ngSubmit)="onSubmit()" >
+            
+            <div class="form-group row">
+              <label for="projectId" class="col-sm-2 col-form-label">Project Id</label>
+              <div class="col-sm-10" style="color: #FF0000">
+                <input type="text" class="form-control" id="projectId" formControlName="projectId" [(ngModel)]="project.projectId">
+                <span *ngIf="searchProject.get('projectId').touched && searchProject.get('projectId').hasError('required')">Enter Project Id</span>
+                </div>
+            </div>
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary" [disabled]="!searchProject.valid" >Search Project</button>
+              </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

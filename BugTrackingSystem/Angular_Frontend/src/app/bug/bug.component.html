@@ -1,0 +1,111 @@
+
+<br>
+<br>
+
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-md-3">
+          <div class="card shadow" style="width: 18rem;">
+            <div class="inner">
+              <img class="card-img-top" src="https://i.ibb.co/tZKFQ0K/create.png"  alt="Card image cap">
+            </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Create Bug Entry</h5>
+                <p class="card-text">Create entry about bug in the record with information like bug status, priority, description, etc</p>
+                <a [routerLink]="['/create-bug']" class="btn btn-primary">Create Bug</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+            <img class="card-img-top" src="https://i.ibb.co/xFsb0FM/read.png"  alt="Card image cap">
+          </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Search Bug</h5>
+              <p class="card-text">Search bug entry in the record with information like bug status, priority, description, etc</p>
+              <a [routerLink]="['/search-bug']" class="btn btn-success">Search Bug</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+            <img class="card-img-top" src="https://i.ibb.co/kxh0qJp/update.png"  alt="Card image cap">
+          </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Update Bug Details</h5>
+              <p class="card-text">Update entry about bug in the record with information like bug status, priority, description, etc</p>
+              <a [routerLink]="['/update-search-bug']" class="btn btn-info">Update Bug</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+            <img class="card-img-top " src="https://i.ibb.co/M2TzQdZ/delete.png"  alt="Card image cap">
+          </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Delete Bug Entry</h5>
+              <p class="card-text">Delete entry about bug in the record with information like bug status, priority, description, etc.</p>
+              <a [routerLink]="['/remove-bug']" class="btn btn-danger">Delete Bug</a>
+            </div>
+        </div>
+
+      </div>
+  </div>
+
+<br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+            <img class="card-img-top" src="https://i.ibb.co/yFPXLRv/list-By-Status.png"  alt="Card image cap">
+          </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">All Bugs Information</h5>
+              <p class="card-text">Get entry about bugs in the record using specific status like Closed or Open</p>
+              <a [routerLink]="['/bug-list']" class="btn btn-warning" >View All Bugs</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card shadow" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/SKXvLHV/bug-proj.jpg"  alt="Card image cap">
+        </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Assign bug to project</h5>
+            <p class="card-text">Assign bugs to project using id's. Deleting the project deletes bugs assigned to that project</p>
+            <a [routerLink]="['/assign-bug-project']" class="btn btn-dark">Assign Project</a>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card shadow" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/56CwcF1/bug-emp.jpg"  alt="Card image cap">
+        </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Assign bug to an employee</h5>
+            <p class="card-text">Assign bugs to employee using bug, employee and project id's</p>
+            <a [routerLink]="['/assign-bug-employee']" class="btn btn-secondary">Assign Employee</a>
+          </div>
+      </div>
+    </div>
+
+</div>
+</div> 
+
+<br>
+<app-bug-stats></app-bug-stats>
+
+
+

@@ -1,0 +1,7 @@
+.jumbotron{
+    margin-bottom: 30px;
+}
+
+input.ng-touched.ng-invalid{
+    border:1px solid red;
+}

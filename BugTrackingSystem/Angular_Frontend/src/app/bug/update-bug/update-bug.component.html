@@ -1,0 +1,116 @@
+<!-- <div class="container">
+  <div >
+    <div class="col-5 mx-auto" >
+      <div class="jumbotron">
+        <h2 style="text-align: center;">Search Bug</h2>
+        <br>
+        <form [formGroup]="searchBug" (ngSubmit)="search()">
+
+          <div class="form-group">    
+            <div>
+              <input type="text" class="form-control" id="bugId" placeholder="Enter bug Id" formControlName="bugId">
+              <span *ngIf="searchBug.get('bugId').touched && searchBug.get('bugId').hasError('required')">Enter Bug Id</span>
+            </div>
+          </div>
+
+           <div class="input-group">
+            <input type="text" class="form-control">
+            <button class="btn btn-outline-secondary" type="button">Go</button>
+          </div> -->
+          
+          <!-- <div class="form-group" style="text-align: center;">
+            <button type="submit" class="btn btn-primary" [disabled]="!searchBug.valid" >Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> --> 
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron">
+        <h2 style="text-align: center;">Update Bug</h2>
+        <form  [formGroup]="updateBug" (ngSubmit)="onSubmit()" >
+
+
+          
+          <div class="form-group row">    
+            <label for="bugId" class="col-sm-2 col-form-label">Bug Id</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <input type="text" class="form-control" id="bugId" formControlName="bugId" [(ngModel)]="bug.bugId">
+              <span *ngIf="updateBug.get('bugId').touched && updateBug.get('bugId').hasError('required')">Enter Bug Id</span>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="status" class="col-sm-2 col-form-label">Bug Status</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <select class="form-control" id="status" formControlName="status" [(ngModel)]="bug.status">
+                <option>Open</option>
+                <option>Closed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">    
+            <label for="assignee" class="col-sm-2 col-form-label">Assignee</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <input type="text" class="form-control" id="assignee" formControlName="assignee" [(ngModel)]="bug.assignee">
+              <span *ngIf="updateBug.get('assignee').touched && updateBug.get('assignee').hasError('required')">Enter assignee name</span>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="type" class="col-sm-2 col-form-label">Bug Type</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <select class="form-control" id="type" formControlName="type" [(ngModel)]="bug.type">
+                <option >Functional bug</option>
+                <option>Content bug</option>
+                <option>Visual bug</option>
+                <option>Usability suggestion</option>
+              </select>
+            </div>
+          </div>
+
+          
+
+          <div class="form-group row">
+            <label for="priority" class="col-sm-2 col-form-label">Bug Priority</label>
+            <div class="col-sm-10" style="color: #FF0000">
+              <select class="form-control" id="priority" formControlName="priority" [(ngModel)]="bug.priority">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="startDate" class="col-2 col-form-label">Start Date</label>
+            <div class="col-10" style="color: #FF0000">
+              <input class="form-control" type="date"  id="startDate" formControlName="startDate" >
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="endDate" class="col-2 col-form-label">End Date</label>
+            <div class="col-10" style="color: #FF0000">
+              <input class="form-control" type="date"  id="endDate" formControlName="endDate" >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bugDesc">Description:</label>
+            <textarea class="form-control" id="bugDesc" rows="3" formControlName="bugDesc" [(ngModel)]="bug.bugDesc"></textarea>
+          </div>
+          <div class="form-group" style="text-align: center;" style="color: #FF0000">
+              <button type="submit" class="btn btn-primary" [disabled]="!updateBug.valid" >Update Bug</button>
+          </div> 
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

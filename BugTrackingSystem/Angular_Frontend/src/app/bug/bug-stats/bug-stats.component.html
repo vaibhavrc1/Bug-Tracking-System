@@ -1,0 +1,33 @@
+
+
+<h1>Bug Statistics<h1>
+<br>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <div class="row justify-content-around">
+            <div class="col-md-6">
+                <button class="button " id="open" [routerLink]="['/bug-list']"><span>Open Bugs : {{open}}</span></button>
+            </div>
+            <div class="col-md-6">
+                <button class="button" id="closed" [routerLink]="['/bug-list']" ><span>Closed Bugs : {{closed}}</span></button>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row justify-content-around">
+            <div class="col-md-3">
+                <button class="button functional" id="functional" [routerLink]="['/bug-list']"><span>Functional Bugs : {{functional}}</span></button>
+            </div>
+            <div class="col-md-3">
+                <button class="button content" id="content" [routerLink]="['/bug-list']"><span>Content Bugs : {{content}}</span></button>
+            </div>
+            <div class="col-md-3">
+                <button class="button visual" id="visual" [routerLink]="['/bug-list']"><span>Visual Bugs : {{visual}}</span></button>
+            </div>
+            <div class="col-md-3">
+                <button class="button suggestion" id="usability" [routerLink]="['/bug-list']"><span>Usability suggestion : {{usability}}</span></button>
+            </div>
+        </div>
+    </div>
+</div>

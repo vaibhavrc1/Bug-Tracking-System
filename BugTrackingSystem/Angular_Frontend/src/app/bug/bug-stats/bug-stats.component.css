@@ -1,0 +1,140 @@
+.jumbotron{
+    text-align:center;
+}
+
+.col.md-6{
+    margin: auto;
+}
+h2{
+    margin: auto;
+}
+
+.button {
+    border-radius: 10px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button{
+    border-radius: 10px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  h1{
+    text-align:center;
+    color: red;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 18px;
+    display: block;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+#open{
+    background-color: green;
+    font-size: 35px;
+    width:400px;
+}
+
+#closed{
+    background-color: red;
+    font-size: 35px;
+    width:400px;
+}
+
+#functional{
+    background-color: #009144;
+}
+
+#content{
+    background-color: #034afc;
+}
+
+#visual{
+    background-color: #7b02c2;
+}
+
+#visual{
+    background-color: #910011;
+}
+
+
+
+#demoFont {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: red;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align:center;
+}

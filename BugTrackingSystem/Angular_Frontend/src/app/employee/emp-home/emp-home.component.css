@@ -1,0 +1,9 @@
+.cont1{
+      
+    Background:linear-gradient(rgba(13,5,10,0.8),rgba(0,0,0,0.2)),url("D:\Projects\Integrated_bugtracking\BugTrackingSystem\Angular_Frontend\src\assets\b1.jpg");
+    color:white;
+    background-attachment:fixed;
+    background-size:100%;
+    background-size:cover;
+    }
+

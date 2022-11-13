@@ -1,0 +1,51 @@
+
+<div class="container-fluid">
+  <div class="jumbotron">
+  <div class="row justify-content-around">
+    <div class="col-md-4">
+      <button type="button" (click)="allStatus()" class="btn btn-outline-success btn-lg">All Bugs</button>
+    </div>
+    <div class="col-md-4">
+      <button type="button" (click)="openStatus()" class="btn btn-outline-primary btn-lg">Open Bugs</button>
+    </div>
+    <div class="col-md-4">
+      <button type="button" (click)="closedStatus()" class="btn btn-outline-danger btn-lg">Closed Bugs</button>
+    </div>
+</div>
+<br>
+<br>
+<br>
+  <div class="row">
+    <table class='table table-striped table-hover table-bordered'>
+      <thead>
+        <tr>
+          <th scope="col" (click)="sortById()">Bug Id</th>
+          <th>Status</th>
+          <th scope="col" (click)="sortByAssignee()">Assignee</th>
+          <th scope="col" (click)="sortByType()">Type</th>
+          <th scope="col" (click)="sortByPriority()">Priority</th>
+          <th scope="col" (click)="sortByStartDate()">Start Date</th>
+          <th scope="col" (click)="sortByEndDate()">End Date</th>
+          <th scope="col" (click)="sortByDescription()">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bug of bugs | paginate: { id: 'listing_pagination',
+        itemsPerPage: 5,
+        currentPage: page,
+        totalItems: totalRec }">
+          <td><a [routerLink]="['/bug',bug.bugId]">{{bug.bugId}} </a></td>
+          <td>{{bug.status}}</td>
+          <td>{{bug.assignee}}</td>
+          <td>{{bug.type}}</td>
+          <td>{{bug.priority}}</td>
+          <td>{{bug.startDate}}</td>
+          <td>{{bug.endDate}}</td>
+          <td>{{bug.bugDesc}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+</div>
+</div>

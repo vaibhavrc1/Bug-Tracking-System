@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h2 style="text-align: center;">Delete Bug</h2>
+          <form  [formGroup]="deleteBug" (ngSubmit)="onSubmit()" >
+            
+            <div class="form-group row">
+              <label for="bugId" class="col-sm-2 col-form-label">Bug Id</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="bugId" formControlName="bugId" [(ngModel)]="bug.bugId">
+                <span *ngIf="deleteBug.get('bugId').touched && deleteBug.get('bugId').hasError('required')">Enter Bug Id</span>
+                </div>
+            </div>
+
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary" [disabled]="!deleteBug.valid" >Delete Bug</button>
+              </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  

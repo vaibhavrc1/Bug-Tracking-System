@@ -1,0 +1,29 @@
+<div class="container">
+ 
+
+<table class='table table-striped table-bordered table-hover '>
+  <caption ><h2>All Projects</h2>  </caption>
+  <thead  style="background-color:rgb(220, 255, 196);">
+      <tr >
+        <th scope="col" (click)="sortById()" class="note" >Project Id</th>
+        <th scope="col" (click)="sortByName()"  class="note">Project Name</th>
+        <th scope="col" (click)="sortByOwner()"  class="note">Project owner</th>
+        <th scope="col" (click)="sortByStatus()"  class="note">status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects | paginate: { id: 'listing_pagination',
+      itemsPerPage: 2,
+      currentPage: page,
+      totalItems: totalRec }">
+        <td><a [routerLink]="['/project',project.projectId]">{{project.projectId}} </a></td>
+        <td>{{project.projectName}}</td>
+        <td>{{project.projectOwner}}</td>
+        <td>{{project.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+		<pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+	</div>
+</div>

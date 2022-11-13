@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h2> Admin Registration</h2>
+          <form [formGroup]="signUp" (ngSubmit)="postData">
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="adminId" placeholder="Admin Id"  >
+                <span *ngIf="signUp.get('adminId').touched && signUp.get('adminId').hasError('required')">Enter Admin Id</span>
+                
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="adminName" placeholder="Full Name"  >
+                <span *ngIf="signUp.get('adminName').touched && signUp.get('adminName').hasError('required')">Enter Name</span>
+              </div>
+ 
+            
+           
+
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="auserName" placeholder="Enter Username" >
+                <span *ngIf="signUp.get('auserName').touched && signUp.get('auserName').hasError('required')">Enter UserName</span>
+              </div>
+
+              <div class="form-group">
+                <input type="password" class="form-control" formControlName="apassword" placeholder="Enter Password" >
+                <span *ngIf="signUp.get('apassword').touched && signUp.get('apassword').hasError('required')">Enter Password</span>
+                <span *ngIf="signUp.get('apassword').touched && signUp.get('apassword').hasError('pattern')"> Password must contain minimum eight characters, at least one letter, one number and one special character</span>
+              </div>
+
+
+              
+           
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" [disabled]="!signUp.valid">Add Admin</button>
+              </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+

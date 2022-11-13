@@ -1,0 +1,86 @@
+
+<!-- <app-project-list></app-project-list>
+<app-create-project></app-create-project> 
+ <app-update-project></app-update-project>
+<app-delete-project></app-delete-project> -->
+
+<div class="container-fluid">
+    <div class="row justify-content-center ">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+              <div class="inner">
+                <img class="card-img-top" src="https://i.ibb.co/tZKFQ0K/create.png"  alt="Card image cap"></div>
+                <div class="card-body text-center">
+                  <p class="card-text"> click on the Button Below to Create a New Project </p>
+                  <a [routerLink]="['/create']" class="btn btn-primary">Create</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="width: 18rem;">
+            <div class="inner">
+              <img class="card-img-top" src="https://i.ibb.co/CvWWGvC/allp.png"  alt="Card image cap"></div>
+              <div class="card-body text-center">
+                <p class="card-text"> click on the Button Below to View All Projects </p>
+                <a [routerLink]="['/getAll']" class="btn btn-success">view All Projects</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="width: 18rem;">
+            <div class="inner">
+              <img class="card-img-top" src="https://i.ibb.co/kxh0qJp/update.png"  alt="Card image cap"></div>
+              <div class="card-body text-center">
+                <p class="card-text"> click on the Button Below to Update a Project </p>
+                <a [routerLink]="['/search']" class="btn btn-warning">Update</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="width: 18rem;">
+            <div class="inner">
+              <img class="card-img-top" src="https://i.ibb.co/M2TzQdZ/delete.png"  alt="Card image cap"></div>
+              <div class="card-body text-center">
+                <p class="card-text"> click on the Button Below to Delete a Project </p>
+                <a [routerLink]="['/delete']" class="btn btn-danger">Delete</a>
+              </div>
+          </div>
+        </div>
+  </div>
+
+  <br>
+ <br>
+
+   <div class="row justify-content-center ">
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top" src="https://i.ibb.co/xFsb0FM/read.png"  alt="Card image cap"></div>
+          <div class="card-body text-center">
+            <p class="card-text"> click on the Button Below to  Find a Project </p>
+            <a [routerLink]="['/get']" class="btn btn-dark">Get Project</a>
+          </div>
+      </div>
+    </div>
+      <div class="col-sm-3">
+          <div class="card" style="width: 18rem;">
+            <div class="inner">
+              <img class="card-img-top" src="https://i.ibb.co/RNWYDZW/create.png"  alt="Card image cap"></div>
+              <div class="card-body text-center">
+                <p class="card-text"> click on the Button Below to add a new employee  to project </p>
+                <a [routerLink]="['/addEmp']" class="btn btn-info">Add Employee</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <div class="inner">
+            <img class="card-img-top" src="https://i.ibb.co/92hZx0s/DELETE.png"  alt="Card image cap"></div>
+            <div class="card-body text-center">
+              <p class="card-text"> click on the Button Below to Delete Employee from project </p>
+              <a [routerLink]="['/deleteEmp']" class="btn btn-secondary">Delete Employee</a>
+            </div>
+        </div>
+      </div>
+    </div> 
+ </div>

@@ -1,0 +1,28 @@
+
+<table class='table table-striped'>
+    <thead>
+      <tr>
+        <th>Bug Id</th>
+        <th>Status</th>
+        <th>Assignee</th>
+        <th>Type</th>
+        <th>Priority</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bug of selectedEmployee.bugList">
+        <td>{{bug.bugId}}</td>
+        <td>{{bug.status}}</td>
+        <td>{{bug.assignee}}</td>
+        <td>{{bug.type}}</td>
+        <td>{{bug.priority}}</td>
+        <td>{{bug.startDate}}</td>
+        <td>{{bug.endDate}}</td>
+        <td>{{bug.bugDesc}}</td>
+      </tr>
+    </tbody>
+  </table>
+

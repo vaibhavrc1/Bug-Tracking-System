@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h2 style="text-align: center;">Delete Employee</h2>
+          <form  [formGroup]="deleteEmployee" (ngSubmit)="onSubmit()" >
+            
+            <div class="form-group row">
+              <label for="empId" class="col-sm-2 col-form-label">Employee Id</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="empId" formControlName="empId" [(ngModel)]="employee.empId">
+                <span *ngIf="deleteEmployee.get('empId').touched && deleteEmployee.get('empId').hasError('required')">Enter Employee Id</span>
+                </div>
+            </div>
+
+            
+            
+            
+           
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary" [disabled]="!deleteEmployee.valid" >Delete Employee</button>
+              </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+

@@ -1,0 +1,101 @@
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="background-color:#3129d6">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img src="https://i.ibb.co/pzFPFNg/output-onlinepngtools-1.png" style="display: inline-block;">
+        <span style="display: inline-block;"></span>
+        <strong> {{title | uppercase}} </strong>
+      </a>
+        <!-- <a class="navbar-brand" [routerLink]="['/']"><img src="https://i.ibb.co/d2j9Bqp/Bugtracker-logo.png" style="display: inline-block;">
+          <span style="display: inline-block;"><strong> {{title | uppercase}} </strong></a> -->
+        <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['home']"><b>Home</b></a>
+          </li>
+          
+        
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['bug']"><b>Bug</b></a>
+          </li>
+        </ul>
+    </div>
+      </nav>
+    </div>
+  
+      
+  
+      
+    <br><br>
+        
+  
+  
+  
+  
+      <div class="cont1">
+  
+        <br><br><br><br><br>
+  
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-2"></div>
+            
+            <div class="col-sm-8" style="text-align: center;">
+              <section class="wow tada">
+              <h1><strong>Welcome Employee..!!</strong></h1></section><br><br><br>
+              <h3><p>Your Contribution matters<br>Just click here and let's go to the work.....</p></h3>
+              <br><br><br>
+       
+              <input class="btn-lg" type="button" value="Click Here" [routerLink]="['bug']" style="background:green;color:white;width:150px">
+              <br><br><br>
+        
+            </div>
+          
+            <div class="col-sm-2"></div>
+        
+             
+          </div>
+        
+        <br><br><br><br>
+        
+          
+        </div> 
+      </div>
+        
+        
+        
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+      
+     <router-outlet></router-outlet>
+     
+    
+  
+  

@@ -7,14 +7,14 @@ This project uses Springboot for front end and Angular for backend.
 
 Technologies Used:
 
--Java 8
--Spring Boot
--Hibernate
--Oracle Database
--Angular 8
--TypeScript
--Maven
--Git
+- Java 8
+- Spring Boot
+- Hibernate
+- Oracle Database
+- Angular 8
+- TypeScript
+- Maven
+- Git
 
 <B>Home Page:</B>
 

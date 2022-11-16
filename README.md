@@ -5,6 +5,17 @@ It provides the create, update, Delete, Assign operations for these modules.
 
 This project uses Springboot for front end and Angular for backend.
 
+Technologies Used:
+
+-Java 8
+-Spring Boot
+-Hibernate
+-Oracle Database
+-Angular 8
+-TypeScript
+-Maven
+-Git
+
 <B>Home Page:</B>
 
 ![alt text](https://github.com/vaibhavrc1/Bug-Tracking-System/blob/master/Screenshots/BugTracking_Welcome.PNG)
